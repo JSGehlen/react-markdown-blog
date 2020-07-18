@@ -1,7 +1,7 @@
 ---
-title: My First Post
+title: Welcome to my blog
 author: Jeremy Gehlen
-date: July 15, 2020
+date: July 17, 2020
 ---
 
 *Pretty cool huh*

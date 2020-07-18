@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 124rem;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 3rem;
+}
+
+.logo {
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    margin-right: auto;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    transition: all .3s ease;
+    margin: 0 auto;
+}
+
+.nav__links {
+    & li {
+        display: inline-block;
+        padding: 0 2rem;
+
+        a {
+            font-weight: 700;
+            transition: all .3s ease;
+
+            &:hover {
+                color: #0088a9;
+            }
+        }
+    }
+}
