@@ -1,11 +1,25 @@
+@mixin portable {
+    @media screen and (max-width: 800px) { @content; }
+}
+
+@mixin desk {
+    @media screen and (min-width: 1025px) { @content; }
+}
+
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    max-width: 124rem;
-    margin: 0 auto;
+    color: #fff;
     height: 100px;
-    padding: 0 3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.header-wrapper { 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .logo {
@@ -16,6 +30,14 @@ header {
     margin-right: auto;
     text-transform: uppercase;
     transition: all .3s ease;
+
+    @include portable{
+        padding: 3rem;
+    }
+
+    &:hover {
+        color: #0088a9;
+    }
 }
 
 .navbar {
@@ -23,21 +45,132 @@ header {
     width: 100%;
     justify-content: flex-end;
     transition: all .3s ease;
-    margin: 0 auto;
+
+    @include portable {
+        background: #2f2f2f;
+        flex-direction: column;
+        padding-top: 10rem;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: all .3s ease;
+        display: none;
+    }
 }
 
 .nav__links {
+    list-style: none;
+
+    @include portable{
+        padding: 0;
+    }
+    
+    
     & li {
         display: inline-block;
         padding: 0 2rem;
 
+        @include portable{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
         a {
             font-weight: 700;
+            color: #fff;
             transition: all .3s ease;
+
+            @include portable {
+                line-height: 6rem;
+            }
 
             &:hover {
                 color: #0088a9;
             }
         }
+    }
+}
+
+.cta {
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+
+    @include portable {
+        margin-left: 0;
+    }
+}
+
+// Hamburger
+
+.menu-btn {
+
+    @include desk {
+        display: none;
+    }
+
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    z-index: 999;
+
+    &__burger {
+        width: 2rem;
+        height: 0.1rem;
+        background: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.2rem 0.5rem rgba(255,101,47,0.2);
+        transition: all .2s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 0.1rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.2rem 0.5rem rgba(255,101,47,0.2);
+            transition: all .2s ease-in-out;
+        }
+
+        &::before {
+            transform: translateY(-0.8rem);
+        }
+
+        &::after {
+            transform: translateY(0.8rem);
+        }
+    }
+}
+
+
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+    height: calc(100vh - 100px);
+    width: 100%;
+    color: #fff;
+
+    @include portable{
+        height: 70vh;
+        width: 100%;
+        padding: 3rem;
+        padding-bottom: 10rem;
     }
 }

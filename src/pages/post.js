@@ -26,11 +26,12 @@ const Post = (props) => {
     return (
         <Layout>
             <div className="post-wrapper">
-                <div className="post">
-                        <h2>{fetchedPost.title}</h2>
-                        <p>Published on {fetchedPost.date} by {fetchedPost.author}</p>
-                    <Markdown source={fetchedPost.content} escapeHtml={false}/>
-                </div>
+                    <h2 className="post-wrapper__title">{fetchedPost.title}
+                        <p><small>Published on {fetchedPost.date} by {fetchedPost.author}</small></p>
+                    </h2>
+                    <div className="post">
+                        <Markdown source={fetchedPost.content} escapeHtml={false}/>
+                    </div>
             </div>
         </Layout>
     )

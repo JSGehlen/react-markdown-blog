@@ -2,18 +2,36 @@ h1 {
     font-size: 72.24px;
     font-weight: 900;
     line-height: 29.124px;
+    
+    @include portable { 
+        font-size: 47.12px; 
+        font-weight: 700; 
+        line-height: 47.122px; 
+    }
 }
 
 h2 {
     font-size: 47.12px;
     font-weight: 700;
     line-height: 29.124px;
+
+    @include portable {
+        font-size: 28.12px;
+        font-weight: 300;
+        line-height: 47.122px; 
+    }
 }
 
 h3 {
     font-size: 28.12px;
     font-weight: 300;
     line-height: 29.124px;
+
+    @include portable {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 29.124px;
+    }
 }
 
 p {

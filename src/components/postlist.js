@@ -10,7 +10,7 @@ const PostList = () => {
     console.log(exerplist)
     return (
         <div className="postlist">
-            <h2>All posts</h2>
+            <h2 className="postlist__title">All posts</h2>
             <div className="posts">
             {postlist.length && 
                 postlist.map((post, i) => {

@@ -1,0 +1,11 @@
+@mixin portable {
+    @media screen and (max-width: 800px) { @content; }
+}
+
+@mixin desk {
+    @media screen and (min-width: 1025px) { @content; }
+}
+
+@mixin widescreen {
+    @media screen and (min-width: 1160px) { @content; }
+}

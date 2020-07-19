@@ -1,3 +1,15 @@
+@mixin portable {
+  @media screen and (max-width: 800px) { @content; }
+}
+
+@mixin desk {
+  @media screen and (min-width: 1025px) { @content; }
+}
+
+@mixin widescreen {
+  @media screen and (min-width: 1160px) { @content; }
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -25,3 +37,41 @@ html {
     top: 0;
     width: 100%;
   }
+
+  // For code snippets in blogs
+
+  blockquote, code {
+    font-family: Livvic, sans-serif;
+    border-radius: 3px;
+    padding: 0.5rem 0.8rem;
+    margin: 0;
+    background-color: #F5F5F6;
+    line-height: 2;
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;
+}
+
+pre {
+    font-family: Livvic, sans-serif;
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;
+}
+
+.main-container {
+  @include  widescreen {
+    max-width: 124rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+  @include desk {
+    max-width: 124rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+}
