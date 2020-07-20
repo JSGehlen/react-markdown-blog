@@ -261,6 +261,7 @@ header {
 }
 
 .postlist__title {
+  margin: 2rem;
   margin-bottom: 10rem;
 }
 
@@ -271,7 +272,8 @@ header {
 }
 
 .post {
-  padding: 3rem;
+  margin: 1rem;
+  padding: 3rem 6rem;
   text-align: left;
   max-width: 100rem;
   -webkit-box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.1);
@@ -289,7 +291,7 @@ header {
 
 .post li {
   color: #000;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .posts {
@@ -324,7 +326,7 @@ header {
 
 @media screen and (max-width: 800px) {
   .post-wrapper {
-    padding: 2rem 2rem 10vh 2rem;
+    padding: 1rem 1rem 10vh 1rem;
   }
 }
 
@@ -428,7 +430,7 @@ blockquote, code {
   padding: 0.5rem 0.8rem;
   margin: 0;
   background-color: #F5F5F6;
-  line-height: 2;
+  line-height: 1.5;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
@@ -443,6 +445,7 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+  margin: 0.5rem;
 }
 
 @media screen and (min-width: 1160px) {

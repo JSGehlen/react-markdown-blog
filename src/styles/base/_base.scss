@@ -46,7 +46,7 @@ html {
     padding: 0.5rem 0.8rem;
     margin: 0;
     background-color: #F5F5F6;
-    line-height: 2;
+    line-height: 1.5;
     white-space: pre-wrap;       
     white-space: -moz-pre-wrap;  
     white-space: -pre-wrap;      
@@ -61,6 +61,7 @@ pre {
     white-space: -pre-wrap;      
     white-space: -o-pre-wrap;    
     word-wrap: break-word;
+    margin: 0.5rem;
 }
 
 .main-container {

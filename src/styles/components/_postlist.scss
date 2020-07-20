@@ -14,6 +14,7 @@
     }
 
     &__title {
+        margin: 2rem;
         margin-bottom: 10rem;
 
         @include portable {
@@ -23,7 +24,8 @@
 }
 
 .post {
-    padding: 3rem;
+    margin: 1rem;
+    padding: 3rem 6rem;
     text-align: left;
     max-width: 100rem;
     box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.1);
@@ -39,7 +41,7 @@
     
     li {
         color: #000;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -61,7 +63,7 @@
     box-shadow: 0 1rem 8rem rgba(0, 0, 0, 0.05);
 
     @include portable {
-        padding: 2rem 2rem 10vh 2rem;
+        padding: 1rem 1rem 10vh 1rem;
     }
     
     &__title {
